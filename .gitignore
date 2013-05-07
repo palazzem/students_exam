@@ -1,0 +1,12 @@
+# IDE
+.idea/
+
+# Django and Python
+static/
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+# Database
+*.sqlite
