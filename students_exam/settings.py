@@ -98,6 +98,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.XsSharingMiddleware',
 )
 
 ROOT_URLCONF = 'students_exam.urls'
@@ -120,6 +121,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'rest_framework',
     'exams',
+    'core',
 )
 
 # Rest framework
@@ -131,6 +133,9 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
     )
 }
+
+# XsSharingMiddleware (WARNING: it is not safe!)
+XS_SHARING_ALLOWED_ORIGINS = '*'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
